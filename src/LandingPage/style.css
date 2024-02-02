@@ -1,0 +1,101 @@
+:root{
+    --dourado: #b2987d;
+    --dark: #252323;
+}
+
+.light-mode{
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-mode{
+    background-color: var(--dark);
+    color: #fff;
+
+}
+
+header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    height: 100px;
+}
+
+header button{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 110px;
+    height: 50px;
+    border: 2px solid var(--dourado);
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: transparent;
+}
+
+header button img{
+    width: 30px;
+    height: auto;
+}
+
+.img-filter{
+    filter: invert();
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner{
+    width: 100%;
+    height: 400px;
+    background-image: url("../../public/assets/banner-barbearia.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section:not(:first-of-type){
+    padding: 100px 0;
+}
+
+section h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+section p{
+    text-align: center;
+    padding: 30px 0;
+}
+
+section p:first-of-type{
+    font-weight: bold;
+    font-size: 19px;
+}
+
+section p:nth-child(3){
+    padding-top: 0px;
+    font-size: 16.5px;
+}
+
+section p:last-of-type{
+    font-family: 'Great Vibes';
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--dourado);
+}
+
+@media screen and (max-width: 375px) {
+    .banner{
+        height: 300px;
+    }
+}
